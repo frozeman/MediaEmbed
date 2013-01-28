@@ -8,7 +8,7 @@
 * http://paulrobertlloyd.com/
 *
 * @author Fabian Vogelsteller [frozeman.de]
-* @version 0.2
+* @version 0.3
 */
 ( function() {
     CKEDITOR.plugins.add( 'mediaembed',
@@ -39,14 +39,17 @@
                               }]
                           }
                        ],
-                  onOk : function() {
-                    for (var i=0; i<window.frames.length; i++) {
-                       if(window.frames[i].name == 'iframeMediaEmbed') {
-                          var content = window.frames[i].document.getElementById("embed").value;
-                       }
-                    }
-                    instance.insertHtml(this.getContentElement( 'iframe', 'embedArea' ).getValue());
-                 }
+                  onOk: function() {
+                        for (var i = 0; i < window.frames.length; i++) {
+                            if (window.frames[i].name == 'iframeMediaEmbed') {
+                                var content = window.frames[i].document.getElementById("embed").value;
+                            }
+                        }
+                        // console.log(this.getContentElement( 'iframe', 'embedArea' ).getValue());
+                        div = editor.document.createElement('div');
+                        div.setHtml(this.getContentElement('iframe', 'embedArea').getValue());
+                        editor.insertElement(div);
+                  }
               };
            } );
 
