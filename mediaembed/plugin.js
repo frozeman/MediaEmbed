@@ -46,9 +46,9 @@
                             }
                         }
                         // console.log(this.getContentElement( 'iframe', 'embedArea' ).getValue());
-                        div = editor.document.createElement('div');
+                        div = instance.document.createElement('div');
                         div.setHtml(this.getContentElement('iframe', 'embedArea').getValue());
-                        editor.insertElement(div);
+                        instance.insertElement(div);
                   }
               };
            } );
