@@ -53,7 +53,9 @@
               };
            } );
 
-            editor.addCommand( 'MediaEmbed', new CKEDITOR.dialogCommand( 'MediaEmbedDialog' ) );
+            editor.addCommand( 'MediaEmbed', new CKEDITOR.dialogCommand( 'MediaEmbedDialog',
+                { allowedContent: 'iframe[*]' }
+            ) );
 
             editor.ui.addButton( 'MediaEmbed',
             {
