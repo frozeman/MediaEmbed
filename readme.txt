@@ -9,6 +9,7 @@ Installing the MediaEmbed Plugin
 
     config.extraPlugins = 'mediaembed';
 
-3. Add the button to your toolbar by adding the 'MediaEmbed' item to the list.
+3. Add the button to your toolbar by adding the 'MediaEmbed' item to the toolbar list.
+(See http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar)
 
 That's it, overall pretty simple.  This plugin could also be used for inserting custom code snippets, or pretty much anything that requires a custom insert.  Enjoy!
