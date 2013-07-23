@@ -13,6 +13,8 @@
 ( function() {
     CKEDITOR.plugins.add( 'mediaembed',
     {
+        icons: 'mediaembed', // %REMOVE_LINE_CORE%
+        hidpi: true, // %REMOVE_LINE_CORE%
         init: function( editor )
         {
            var me = this;
@@ -61,7 +63,6 @@
             {
                 label: 'Embed Media',
                 command: 'MediaEmbed',
-                icon: this.path + 'images/icon.png',
                 toolbar: 'mediaembed'
             } );
         }
