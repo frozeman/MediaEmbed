@@ -42,13 +42,7 @@
                           }
                        ],
                   onOk: function() {
-                        for (var i = 0; i < window.frames.length; i++) {
-                            if (window.frames[i].name == 'iframeMediaEmbed') {
-                                var content = window.frames[i].document.getElementById("embed").value;
-                            }
-                        }
-                        // console.log(this.getContentElement( 'iframe', 'embedArea' ).getValue());
-                        div = instance.document.createElement('div');
+                        var div = instance.document.createElement('div');
                         div.setHtml(this.getContentElement('iframe', 'embedArea').getValue());
                         instance.insertElement(div);
                   }
