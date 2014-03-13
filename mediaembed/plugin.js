@@ -8,7 +8,7 @@
 * http://paulrobertlloyd.com/
 *
 * @author Fabian Vogelsteller [frozeman.de]
-* @version 0.6
+* @version 0.8
 */
 CKEDITOR.plugins.add( 'mediaembed',
     {
