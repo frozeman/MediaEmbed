@@ -8,20 +8,20 @@
 * http://paulrobertlloyd.com/
 *
 * @author Fabian Vogelsteller [frozeman.de]
-* @version 0.5
+* @version 0.8
 */
-( function() {
-    CKEDITOR.plugins.add( 'mediaembed',
+CKEDITOR.plugins.add( 'mediaembed',
     {
         icons: 'mediaembed', // %REMOVE_LINE_CORE%
         hidpi: true, // %REMOVE_LINE_CORE%
+        lang: 'en,es',
         init: function( editor )
         {
            var me = this;
            CKEDITOR.dialog.add( 'MediaEmbedDialog', function (instance)
            {
               return {
-                 title : 'Embed Media',
+                 title : editor.lang.mediaembed.dialogTitle,
                  minWidth : 550,
                  minHeight : 200,
                  contents :
@@ -32,7 +32,7 @@
                              elements :[{
                                 id : 'embedArea',
                                 type : 'textarea',
-                                label : 'Paste Embed Code Here',
+                                label : editor.lang.mediaembed.dialogLabel,
                                 'autofocus':'autofocus',
                                 setup: function(element){
                                 },
@@ -55,10 +55,9 @@
 
             editor.ui.addButton( 'MediaEmbed',
             {
-                label: 'Embed Media',
+                label: editor.lang.mediaembed.toolbar,
                 command: 'MediaEmbed',
                 toolbar: 'mediaembed'
             } );
         }
     } );
-} )();
