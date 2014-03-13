@@ -1,7 +1,6 @@
 /**
  * @author Fabian Vogelsteller [frozeman.de]
- * @copyright Copyright (c) 2013 - Önder Ceylan. All rights reserved.
- * @version 0.6
+ * @version 0.8
  */
 
 // set CKeditor lang
